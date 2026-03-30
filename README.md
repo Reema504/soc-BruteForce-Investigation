@@ -129,6 +129,55 @@ The detection was based on correlating multiple events rather than relying on a 
 Multiple failed login attempts detected from external IP (203.0.113.5), indicating a brute-force attack.
 
 ---
+
+## 🔎 Indicators of Compromise (IOCs)
+
+
+
+The following indicators were identified during the investigation:
+
+
+
+- Suspicious IP Address: 203.0.113.5 (External brute-force source)
+
+- Suspicious IP Address: 198.51.100.7 (Possible lateral movement)
+
+- Targeted Account: admin
+
+- Observed Activity:
+
+  - Multiple failed login attempts (4625)
+
+  - Successful authentication (4624)
+
+  - Privilege escalation (4672)
+
+  - Suspicious PowerShell execution (4688)
+
+
+
+---
+
+
+
+## 🛡️ Recommendations
+
+
+
+Based on the findings, the following security measures are recommended:
+
+
+
+- Implement account lockout policies to prevent brute-force attacks
+
+- Continuously monitor failed login attempts (Event ID 4625)
+
+- Restrict and log PowerShell usage to detect malicious activity
+
+- Enable Multi-Factor Authentication (MFA) for privileged accounts
+
+- Investigate and block suspicious external IP addresses
+---
 ## ✅ Conclusion
 
 🚨 Confirmed Security Breach (True Positive)
