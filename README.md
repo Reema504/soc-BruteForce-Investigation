@@ -6,7 +6,7 @@
 
 This project simulates a real SOC investigation using log analysis in Elasticsearch.
 
-
+Logs are provided in CSV format and analyzed using Elasticseach.
 
 ## 🎯 Objective
 
