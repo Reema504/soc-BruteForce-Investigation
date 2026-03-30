@@ -1,13 +1,12 @@
 # 🚨 SOC Investigation: Brute Force Attack & PowerShell Execution
 
->  🚨 This project demonstrates real SOC investigation skills including log correlation, attack detection, and threat analysis
-
+>  🚨 This project simulates a real-world SOC investigation, demonstrating practical skills in log analysis, event correlation, and multi-stage attack detection using Elasticsearch SIEM.
 
 ## 📌 Overview
 
 This project simulates a real SOC investigation using log analysis in Elasticsearch.
 
-Logs are provided in CSV format and analyzed using Elasticseach.
+Logs are provided in CSV format and analyzed using Elasticsearch.
 
 ## 🎯 Objective
 
@@ -18,7 +17,6 @@ Detect and analyze a potential attack involving:
 - Successful authentication
 
 - Suspicious process execution
-
 
 
 
@@ -71,9 +69,12 @@ Normal user activity was also present (user1, user2, user3), confirming that the
 
 
 
-Overall, the attack demonstrates a full compromise chain:
+This confirms a multi-stage attack lifecycle:
 
 Brute Force → Initial Access → Privilege Escalation → Command Execution
+
+indicating a successful account compromise and active malicious execution.
+
 
 ## ⏱️ Attack Timeline
 
@@ -102,12 +103,33 @@ The detection was based on correlating multiple events rather than relying on a 
 
 ## 📊 MITRE ATT&CK Mapping
 
-- T1110 – Brute Force  
+- T1110 – Brute Force 
 
-- T1059 – Command Execution  
+- T1059 – Command Execution 
 
 
 
+---
+
+## 🚨 Detection Logic
+
+The following detection logic can be used in a SIEM to identify similar attacks:
+
+- Multiple failed login attempts (Event ID 4625) from the same IP within a short time window
+- Followed by a successful login (4624) from the same source
+- Privilege escalation event (4672) assigned to the same account
+- Suspicious process execution (4688), especially PowerShell
+
+Detection Rule Concept:
+
+IF:
+    Failed logins > threshold
+    AND successful login from same IP
+    AND privilege escalation
+    AND process execution
+
+THEN:
+    Trigger alert: Possible account compromise (Brute Force + Execution)
 ---
 
 ## 🔎 Indicators of Compromise (IOCs)
