@@ -60,11 +60,49 @@ Suspicious PowerShell activity detected
 ---
 
 
-
 ## 🧠 Analysis
 
-The attacker conducted a brute-force attack, successfully compromised the admin account, and executed suspicious PowerShell commands, indicating potential malicious activity.
 
+
+Multiple attack patterns were identified within the dataset.
+
+
+
+The first attack originated from an internal IP (192.168.1.10), where multiple failed login attempts (Event ID 4625) were observed within a short time frame, indicating a brute-force attempt. This was followed by a successful login (4624), privilege escalation (4672), and PowerShell execution (4688), suggesting account compromise.
+
+
+
+A second and more critical attack was detected from an external IP address (203.0.113.5). The attacker performed repeated failed login attempts, eventually gaining access to the admin account. This was followed by privilege escalation and suspicious PowerShell execution, indicating a high likelihood of malicious activity.
+
+
+
+Additionally, another suspicious login was observed from IP (198.51.100.7), followed by command execution, which may indicate lateral movement or further compromise.
+
+
+
+Normal user activity was also present (user1, user2, user3), confirming that the dataset includes both benign and malicious behavior, strengthening the reliability of the analysis.
+
+
+
+Overall, the attack demonstrates a full compromise chain:
+
+Brute Force → Initial Access → Privilege Escalation → Command Execution
+
+## ⏱️ Attack Timeline
+
+
+
+- 10:00 → Multiple failed logins (192.168.1.10)
+
+- 10:01 → Successful login + privilege escalation + PowerShell
+
+- 10:05 → External brute-force attack (203.0.113.5)
+
+- 10:05 → Account compromise + privilege escalation
+
+- 10:05 → Suspicious PowerShell execution
+
+- 10:07 → Additional suspicious login (198.51.100.7)
 ---
 
  ## 🔑 Key Insight
