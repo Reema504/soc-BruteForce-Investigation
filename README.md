@@ -1,5 +1,6 @@
 # 🚨 SOC Investigation: Brute Force Attack & PowerShell Execution
 
+>  🚨 This project demonstrates real SOC investigation skills including log correlation, attack detection, and threat analysis
 
 
 ## 📌 Overview
@@ -62,9 +63,13 @@ Suspicious PowerShell activity detected
 
 ## 🧠 Analysis
 
-The attacker performed brute-force attempts, gained access, and executed PowerShell commands.
+The attacker conducted a brute-force attack, successfully compromised the admin account, and executed suspicious PowerShell commands, indicating potential malicious activity.
 
+---
 
+ ## 🔑 Key Insight
+
+The detection was based on correlating multiple events rather than relying on a single alert, which is a critical SOC analyst skill.
 
 ---
 
