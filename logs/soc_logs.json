@@ -1,0 +1,64 @@
+timestamp,event_id,username,source_ip,status,description
+
+2024-03-20 10:00:01,4625,admin,192.168.1.10,failed,Failed login attempt
+
+2024-03-20 10:00:05,4625,admin,192.168.1.10,failed,Failed login attempt
+
+2024-03-20 10:00:10,4625,admin,192.168.1.10,failed,Failed login attempt
+
+2024-03-20 10:00:15,4625,admin,192.168.1.10,failed,Failed login attempt
+
+2024-03-20 10:00:20,4625,admin,192.168.1.10,failed,Failed login attempt
+
+2024-03-20 10:00:25,4625,admin,192.168.1.10,failed,Failed login attempt
+
+2024-03-20 10:00:30,4625,admin,192.168.1.10,failed,Failed login attempt
+
+2024-03-20 10:00:35,4625,admin,192.168.1.10,failed,Failed login attempt
+
+2024-03-20 10:00:40,4625,admin,192.168.1.10,failed,Failed login attempt
+
+2024-03-20 10:00:45,4625,admin,192.168.1.10,failed,Failed login attempt
+
+2024-03-20 10:01:00,4624,admin,192.168.1.10,success,Successful login
+
+2024-03-20 10:01:10,4672,admin,192.168.1.10,success,Admin privileges assigned
+
+2024-03-20 10:01:20,4688,admin,192.168.1.10,success,PowerShell execution detected
+
+2024-03-20 10:02:00,4624,admin,10.0.0.2,success,Suspicious login from new IP
+
+2024-03-20 10:02:10,4688,admin,10.0.0.2,success,Command execution detected
+
+2024-03-20 10:03:00,4625,user1,10.0.0.5,failed,Failed login attempt
+
+2024-03-20 10:03:10,4624,user1,10.0.0.5,success,Normal login
+
+2024-03-20 10:04:00,4624,user2,172.16.0.3,success,Normal login
+
+2024-03-20 10:04:10,4688,user2,172.16.0.3,success,Process execution
+
+2024-03-20 10:05:00,4625,admin,203.0.113.5,failed,External brute force attempt
+
+2024-03-20 10:05:05,4625,admin,203.0.113.5,failed,External brute force attempt
+
+2024-03-20 10:05:10,4625,admin,203.0.113.5,failed,External brute force attempt
+
+2024-03-20 10:05:15,4625,admin,203.0.113.5,failed,External brute force attempt
+
+2024-03-20 10:05:20,4625,admin,203.0.113.5,failed,External brute force attempt
+
+2024-03-20 10:05:30,4624,admin,203.0.113.5,success,Compromised login
+
+2024-03-20 10:05:40,4672,admin,203.0.113.5,success,Privilege escalation
+
+2024-03-20 10:05:50,4688,admin,203.0.113.5,success,Suspicious PowerShell
+
+2024-03-20 10:06:00,4624,user3,192.168.1.50,success,Normal login
+
+2024-03-20 10:06:10,4688,user3,192.168.1.50,success,Normal process
+
+2024-03-20 10:07:00,4624,admin,198.51.100.7,success,Another suspicious login
+
+2024-03-20 10:07:10,4688,admin,198.51.100.7,success,Execution detected
+
