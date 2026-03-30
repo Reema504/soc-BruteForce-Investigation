@@ -21,15 +21,6 @@ Detect and analyze a potential attack involving:
 
 
 
----
-
-
-
-## 🧪 Scenario
-
-An external IP (203.0.113.5) attempted multiple logins on an admin account.
-
-
 
 ---
 
@@ -61,10 +52,6 @@ Suspicious PowerShell activity detected
 
 
 ## 🧠 Analysis
-
-
-
-Multiple attack patterns were identified within the dataset.
 
 
 
@@ -120,13 +107,6 @@ The detection was based on correlating multiple events rather than relying on a 
 - T1059 – Command Execution  
 
 
-
----
-
-### Brute Force Attempt
-
-
-Multiple failed login attempts detected from external IP (203.0.113.5), indicating a brute-force attack.
 
 ---
 
